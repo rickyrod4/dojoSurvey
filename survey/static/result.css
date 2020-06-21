@@ -1,0 +1,14 @@
+body {
+    background-color: cadetblue;
+}
+h1 {
+    display: inline-block;
+    margin-left: 35%;
+    color: chartreuse;
+}
+p {
+    display: inline-block;
+    margin-left: 31%;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

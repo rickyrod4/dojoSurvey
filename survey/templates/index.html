@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    
+    <h1>Welcome to the Dojo Survey</h1>
+    <h2>Please fill out this form</h2>
+    <div id="content">
+        <form action="/result" method="POST">
+            {% csrf_token %}
+            <p>Name: <input type="text" name="name" placeholder="type" id="name">
+            <p>Dojo Location: 
+                <select name="location" id="location">
+                    <option value="Dallas">Dallas</option>
+                    <option value="San Fransisco">San Fransisco</option>
+                    <option value="Seatle">Seatle</option>
+                    <option value="Other">Other</option>
+                </select>
+            </p> 
+            <p>Favorite Language
+                <select name="language" id="language">
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Mern">Mern</option>
+                </select>
+            </p> 
+            <p>Comment (optional):
+                <input type="text" name="comment" id="comment" placeholder="type a comment in here">
+            </p>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

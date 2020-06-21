@@ -1,0 +1,45 @@
+/** {
+    outline:  solid 1px black;
+}
+*/
+body{
+    background-color: mediumseagreen;
+}
+#content{
+    display: inline-block;
+    outline: 3px solid black;
+    margin-left: 33%;
+}
+h1 {
+    color: darkred;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+    margin-left: 36%;
+}
+h2 {
+    color: darkblue;
+    display: inline-block;
+    margin-left: 40%;
+    border-bottom: black 3px;
+    border-radius: 2px;
+}
+p {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 25%;
+    padding: 0px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+
+}
+#comment {
+    width: 200px;
+    height: 100px;
+}
+button {
+    color: orange;
+    background-color: black;
+    width: 100px;
+    margin-left: 30%;
+    margin-top: 10px;
+}
