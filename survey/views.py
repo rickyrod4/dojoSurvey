@@ -4,15 +4,28 @@ from django.shortcuts import render, redirect
 def index(request):
     if 'name' not in request.session:
         request.session['name'] = 'new user'
-    return render(request, 'index.html')
+
+
+    context = {
+        'name' : request.session['name'],
+        'location' : request.session['location'],
+        'language' : request.session['language'],
+        'comment' : request.session['comment']
+    }
+    print(context)
+    return render(request, 'index.html', context)
 
 def result(request):
-    print(request.POST)
-    context = {
-        "name" : request.POST['name'],
-        'location' : request.POST['location'],
-        'language' : request.POST['language'],
-        "comment" : request.POST['comment']
-    }
+    #print(request.POST)
+
+    request.session['name'] = request.POST['name'],
+    request.session['location'] = request.POST['location'],
+    request.session['language'] = request.POST['language'],
+    request.session['comment'] = request.POST['comment'],
     
-    return render(request, 'result.html', context)
+    return redirect('/')
+    #return render(request, 'result.html', context)
+
+def reset(request):
+    del request.session['context']
+    return redirect('/')

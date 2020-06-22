@@ -34,7 +34,14 @@
                 <input type="text" name="comment" id="comment" placeholder="type a comment in here">
             </p>
             <button>Submit</button>
+            <a href="/reset"><button>reset</button></a>
         </form>
+    </div>
+    <div><h4>Form info</h4>
+        <p>Hello {{request.session.name}}</p>
+        <p>{{name}} located in {{location}}</p>
+        <p>{{name}}'s' favorite language is {{language}}</p>
+        <p>{{name}} said "{{comment}}"</p>
     </div>
 </body>
 </html>
